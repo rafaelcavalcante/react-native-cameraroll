@@ -76,8 +76,6 @@ public class CameraRollModule extends ReactContextBaseJavaModule {
     Images.Media.DATE_TAKEN,
     MediaStore.MediaColumns.WIDTH,
     MediaStore.MediaColumns.HEIGHT,
-    Images.Media.LONGITUDE,
-    Images.Media.LATITUDE,
     MediaStore.MediaColumns.DATA
   };
 
@@ -457,8 +455,8 @@ public class CameraRollModule extends ReactContextBaseJavaModule {
     int dateTakenIndex = media.getColumnIndex(Images.Media.DATE_TAKEN);
     int widthIndex = media.getColumnIndex(MediaStore.MediaColumns.WIDTH);
     int heightIndex = media.getColumnIndex(MediaStore.MediaColumns.HEIGHT);
-    int longitudeIndex = media.getColumnIndex(Images.Media.LONGITUDE);
-    int latitudeIndex = media.getColumnIndex(Images.Media.LATITUDE);
+    int longitudeIndex = 0;
+    int latitudeIndex = 0;
     int dataIndex = media.getColumnIndex(MediaStore.MediaColumns.DATA);
 
     for (int i = 0; i < limit && !media.isAfterLast(); i++) {
